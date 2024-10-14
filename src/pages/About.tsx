@@ -1,6 +1,7 @@
 import React from 'react';
 import SkillIcons from '../components/SkillIcons'; // Import your SkillIcons component
 import { motion } from 'framer-motion';
+import profileImage from '../assets/profile_wharf.jpg'
 
 const About: React.FC = () => {
     return (
@@ -20,7 +21,7 @@ const About: React.FC = () => {
                     className="w-full lg:w-[20%] flex justify-center lg:justify-end mb-8 lg:mb-0 lg:pr-12 z-10"
                 >
                     <motion.img
-                        src="profile_wharf.jpg"
+                        src={profileImage}
                         alt="Profile"
                         className="w-48 h-48 object-cover rounded-full lg:rounded-lg border-4 border-white shadow-lg"
                         whileHover={{ scale: 1.1, rotate: 5 }}

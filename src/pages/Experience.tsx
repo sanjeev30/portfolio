@@ -1,6 +1,11 @@
 import React from 'react';
 import ExperienceItem from '../components/ExperienceItem';
 import { motion } from 'framer-motion'; // Added for animations
+import ourCode from '../assets/ourcode.png';
+import gmu from '../assets/gmu.png';
+import tcs from '../assets/tcs.png';
+import best from '../assets/best.png';
+import mu from '../assets/mumbai-university.png';
 
 const experiences = [
     {
@@ -9,7 +14,7 @@ const experiences = [
         company: 'OurCode.io',
         duration: 'Aug 2024 – Present',
         description: 'Contributed to the development of ActiveDocumentation, improving Java codebase design enforcement.',
-        image: `ourcode.png`,
+        image: ourCode,
     },
     {
         id: 2,
@@ -17,7 +22,7 @@ const experiences = [
         company: 'George Mason University',
         duration: 'Aug 2022 – May 2024',
         description: 'Relevant Coursework: Component Based Software Development, Secure Software Programming, Decision Guidance.',
-        image: `gmu.png`,
+        image: gmu,
     },
     {
         id: 3,
@@ -25,7 +30,7 @@ const experiences = [
         company: 'Tata Consultancy Services (TCS)',
         duration: 'Jun 2019 – Jul 2022',
         description: 'Developed APIs, automated security assessments, and improved observability using Open Telemetry.',
-        image: `tcs.png`,
+        image: tcs,
     },
     {
         id: 4,
@@ -33,7 +38,7 @@ const experiences = [
         company: 'B.E.S.T',
         duration: 'Jun 2018 – Jul 2018',
         description: 'Built an Android app to track maintenance activities, increasing crew efficiency.',
-        image: `best.png`,
+        image: best,
     },
     {
         id: 5,
@@ -41,7 +46,7 @@ const experiences = [
         company: 'University of Mumbai',
         duration: 'Aug 2015 – May 2019',
         description: 'Relevant Coursework: Data Structures, Web Technologies, Operating Systems, Computer Networks.',
-        image: `mumbai-university.png`,
+        image: mu,
     },
 ];
 

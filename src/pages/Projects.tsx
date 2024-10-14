@@ -3,6 +3,7 @@
 import React from 'react';
 // import ProjectCard from '../components/ProjectCard';
 import { motion } from 'framer-motion'; // For animations
+import wip from '../assets/wip.webp';
 
 // const projects = [
 //     {
@@ -55,7 +56,7 @@ const Projects: React.FC = () => {
             {/* Construction Image Placeholder */}
             <div className="flex items-center justify-center">
                 <img
-                    src="wip.webp"
+                    src={wip}
                     alt="Construction in Progress"
                     className="rounded-lg shadow-lg"
                 />
