@@ -6,6 +6,7 @@ import { useAppSelector } from './store/hooks';
 import Navbar from './components/Navbar';
 import Layout from './components/Layout';
 import Footer from './components/Footer';
+import DarkModeToggle from './components/DarkModeToggle';
 
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -65,6 +66,7 @@ const App: React.FC = () => {
           </Routes>
         </Layout>
         <Footer />
+        <DarkModeToggle />
       </Router>
     </div>
   );

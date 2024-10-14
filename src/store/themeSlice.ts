@@ -29,4 +29,5 @@ const themeSlice = createSlice({
 });
 
 export const { toggleDarkMode, toggleNavOpen, closeNav } = themeSlice.actions;
+
 export default themeSlice.reducer;
