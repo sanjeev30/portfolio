@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import { FaFileDownload, FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa'; // Import LinkedIn and GitHub icons
+import { FaFileDownload, FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const getGreeting = (): string => {
     const currentHour = new Date().getHours();
@@ -41,7 +42,7 @@ const Home: React.FC = () => {
                 </motion.div>
 
                 {/* Text and Buttons */}
-                <div className="order-2 lg:order-1 flex flex-col items-center lg:items-center justify-center w-full lg:w-1/2 px-4 lg:px-10 h-full text-center lg:text-center z-20">
+                <div className="order-2 lg:order-1 flex flex-col items-center lg:items-center justify-center w-full lg:w-1/2 px-4 lg:px-10 h-full text-center lg:text-center">
                     {/* Header Text */}
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
@@ -53,13 +54,13 @@ const Home: React.FC = () => {
                     </motion.h1>
 
                     {/* Typing Text */}
-                    <p className="mt-6 text-xl sm:text-3xl text-gray-700 dark:text-gray-300 font-light animate-fade-in z-20">
+                    <p className="mt-6 text-xl sm:text-3xl text-gray-700 dark:text-gray-300 font-light animate-fade-in">
                         I'm {text}
                         <Cursor cursorColor="#000" />
                     </p>
 
                     {/* Buttons */}
-                    <div className="mt-10 grid grid-cols-2 gap-6 w-full max-w-lg z-20"> {/* Increased z-index */}
+                    <div className="mt-10 grid grid-cols-2 gap-6 w-full max-w-lg">
                         {/* Resume Button */}
                         <motion.a
                             whileHover={{ scale: 1.1, boxShadow: '0px 0px 3px rgba(255, 255, 255, 0.5)' }}
@@ -117,11 +118,12 @@ const Home: React.FC = () => {
                 <h2 className="text-3xl font-bold mb-6 text-center">Let's Connect</h2>
                 <p className="text-lg text-center mb-6">Have a project in mind? Let's build something great together.</p>
                 <div className="flex justify-center">
-                    <a href="/contact" className="px-8 py-3 bg-teal-500 text-white rounded-lg shadow-md font-semibold hover:bg-teal-600 transition-all duration-300 ease-in-out">
+                    <Link to="/contact" className="px-8 py-3 bg-teal-500 text-white rounded-lg shadow-md font-semibold hover:bg-teal-600 transition-all duration-300 ease-in-out">
                         Get in Touch
-                    </a>
+                    </Link>
                 </div>
             </section>
+
         </>
     );
 };
