@@ -7,8 +7,9 @@ import Navbar from './components/Navbar';
 import Layout from './components/Layout';
 import Footer from './components/Footer';
 import DarkModeToggle from './components/DarkModeToggle';
+import Home from './pages/Home';
 
-const Home = lazy(() => import('./pages/Home'));
+// const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Experience = lazy(() => import('./pages/Experience'));
 const Projects = lazy(() => import('./pages/Projects'));
@@ -26,9 +27,7 @@ const App: React.FC = () => {
             <Route
               path="/"
               element={
-                <Suspense fallback={<div>Loading Home...</div>}>
-                  <Home />
-                </Suspense>
+                <Home />
               }
             />
             <Route
