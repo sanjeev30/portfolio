@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { FaFileDownload, FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
-
+import profileImage from '../assets/profile-gray-bg.png'
 const getGreeting = (): string => {
     const currentHour = new Date().getHours();
     if (currentHour < 12) return 'Good morning';
@@ -35,7 +35,7 @@ const Home: React.FC = () => {
                     className="order-1 lg:order-2 w-full lg:w-1/2 flex justify-center lg:justify-center mt-2 lg:mt-0 mb-8 lg:mb-0"
                 >
                     <img
-                        src="/profile-gray-bg.png"
+                        src={profileImage}
                         alt="Hero"
                         className="w-64 h-64 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-white shadow-lg transition-transform hover:scale-105"
                     />
