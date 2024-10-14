@@ -1,40 +1,105 @@
-// src/pages/Experience.tsx
-
 import React from 'react';
 import ExperienceItem from '../components/ExperienceItem';
+import { motion } from 'framer-motion'; // Added for animations
 
 const experiences = [
     {
         id: 1,
-        role: 'Frontend Developer',
-        company: 'TechCorp',
-        duration: 'Jan 2020 - Present',
-        logo: 'https://picsum.photos/seed/picsum1/100/100',
-        description: 'Developed and maintained web applications using React and TypeScript.',
+        role: 'Software Engineer',
+        company: 'OurCode.io',
+        duration: 'Aug 2024 – Present',
+        description: 'Contributed to the development of ActiveDocumentation, improving Java codebase design enforcement.',
+        image: `ourcode.png`,
     },
     {
         id: 2,
-        role: 'Software Engineer',
-        company: 'InnovateX',
-        duration: 'Jun 2018 - Dec 2019',
-        logo: 'https://picsum.photos/seed/picsum2/100/100',
-        description: 'Worked on backend systems using Node.js and Express.',
+        role: 'MS in Computer Science',
+        company: 'George Mason University',
+        duration: 'Aug 2022 – May 2024',
+        description: 'Relevant Coursework: Component Based Software Development, Secure Software Programming, Decision Guidance.',
+        image: `gmu.png`,
     },
-    // Add more experiences as needed
+    {
+        id: 3,
+        role: 'Software Developer',
+        company: 'Tata Consultancy Services (TCS)',
+        duration: 'Jun 2019 – Jul 2022',
+        description: 'Developed APIs, automated security assessments, and improved observability using Open Telemetry.',
+        image: `tcs.png`,
+    },
+    {
+        id: 4,
+        role: 'Software Development Intern',
+        company: 'B.E.S.T',
+        duration: 'Jun 2018 – Jul 2018',
+        description: 'Built an Android app to track maintenance activities, increasing crew efficiency.',
+        image: `best.png`,
+    },
+    {
+        id: 5,
+        role: 'BE in Computer Engineering',
+        company: 'University of Mumbai',
+        duration: 'Aug 2015 – May 2019',
+        description: 'Relevant Coursework: Data Structures, Web Technologies, Operating Systems, Computer Networks.',
+        image: `mumbai-university.png`,
+    },
 ];
 
 const Experience: React.FC = () => {
     return (
-        <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl sm:text-5xl font-bold text-center mb-12">
-                Experience
-            </h1>
-            <div className="max-w-4xl mx-auto space-y-8">
-                {experiences.map((exp, index) => (
-                    <ExperienceItem key={exp.id} experience={exp} index={index} />
-                ))}
+        <>
+            {/* Experience Section */}
+            <div className="min-h-screen bg-gradient-to-br from-light-blue-400 via-violet-400 to-coral-400 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden px-4 lg:px-20">
+                {/* Artistic Background Elements */}
+                <div className="absolute -top-16 -left-16 w-96 h-96 bg-gradient-to-tr from-green-400 to-blue-500 rounded-full filter blur-3xl opacity-40 animate-blob"></div>
+                <div className="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tr from-pink-400 to-purple-500 rounded-full filter blur-3xl opacity-40 animate-blob animation-delay-3000"></div>
+                <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-tr from-yellow-300 to-red-400 rounded-full filter blur-3xl opacity-30 animate-blob animation-delay-5000"></div>
+
+                {/* Title */}
+                <motion.h1
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12 pt-12"
+                >
+                    My Experience
+                </motion.h1>
+
+                {/* Large Screen Timeline */}
+                <div className="hidden lg:block">
+                    <div className="relative">
+                        {/* Timeline vertical line */}
+                        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-300"></div>
+
+                        {experiences.map((exp, index) => (
+                            <ExperienceItem
+                                key={exp.id}
+                                experience={exp}
+                                index={index}
+                                largeScreen
+                            />
+                        ))}
+                    </div>
+                </div>
+
+                {/* Small Screen Timeline */}
+                <div className="block lg:hidden">
+                    <div className="relative">
+                        {/* Timeline vertical line for mobile */}
+                        <div className="absolute left-6 top-0 bottom-0 h-full w-1 bg-gray-300"></div>
+
+                        {experiences.map((exp, index) => (
+                            <ExperienceItem
+                                key={exp.id}
+                                experience={exp}
+                                index={index}
+                                largeScreen={false}
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
