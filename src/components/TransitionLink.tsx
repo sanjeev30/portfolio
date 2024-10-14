@@ -17,7 +17,7 @@ const TransitionLink: React.FC<TransitionLinkProps> = ({
     onClick,
 }) => {
     const navigate = useNavigate();
-    const [isPending, startTransition] = useTransition();
+    const [, startTransition] = useTransition();
     const location = useLocation();
 
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {

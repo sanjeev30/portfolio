@@ -1,40 +1,103 @@
-// src/pages/About.tsx
-
 import React from 'react';
-import SkillIcons from '../components/SkillIcons';
+import SkillIcons from '../components/SkillIcons'; // Import your SkillIcons component
+import { motion } from 'framer-motion';
 
 const About: React.FC = () => {
     return (
-        // <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-        <div className='min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-600 to-blue-500 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden'>
-            {/* Background Shapes */}
-            <div className="absolute -top-16 -left-16 w-96 h-96 bg-pink-300 rounded-full filter blur-3xl opacity-30 animate-blob"></div>
-            <div className="absolute -bottom-16 -right-16 w-96 h-96 bg-yellow-300 rounded-full filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        <>
+            {/* About Me Section */}
+            <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-gradient-to-br from-light-blue-400 via-violet-400 to-coral-400 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
+                {/* Blurred Artistic Polygon Shapes */}
+                <div className="absolute -top-16 -left-16 w-96 h-96 bg-gradient-to-tr from-green-400 to-blue-500 rounded-full filter blur-3xl opacity-40 animate-blob"></div>
+                <div className="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tr from-pink-400 to-purple-500 rounded-full filter blur-3xl opacity-40 animate-blob animation-delay-3000"></div>
+                <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-tr from-yellow-300 to-red-400 rounded-full filter blur-3xl opacity-30 animate-blob animation-delay-5000"></div>
 
-            {/* Profile Picture */}
-            <img
-                src="https://picsum.photos/200/200"
-                alt="Profile"
-                className="w-48 h-48 rounded-full object-cover mb-8 shadow-lg"
-            />
+                {/* Profile Picture (Occupies 20% width, animated, square on large screens, rounded on small screens) */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                    className="w-full lg:w-[20%] flex justify-center lg:justify-end mb-8 lg:mb-0 lg:pr-12 z-10"
+                >
+                    <motion.img
+                        src="profile_wharf.jpg"
+                        alt="Profile"
+                        className="w-48 h-48 object-cover rounded-full lg:rounded-lg border-4 border-white shadow-lg"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ duration: 0.5, type: 'spring' }}
+                    />
+                </motion.div>
 
-            {/* Humorous Story */}
-            <div className="max-w-2xl text-center text-white">
-                <h1 className="text-3xl sm:text-5xl font-bold mb-4">
-                    A Developer's Tale
-                </h1>
-                <p className="text-lg sm:text-xl text-white/60">
-                    Once upon a coffee-fueled night, I accidentally deployed a "Hello World" app to Mars.
-                    Now, Martians think I'm their leader! When I'm not leading interplanetary tech revolutions,
-                    I build amazing web applications right here on Earth.
-                </p>
+                {/* About Me Content (Occupies 80% width) */}
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                    className="flex flex-col items-center lg:items-start justify-center lg:justify-center text-center lg:text-left w-full lg:w-[80%] px-4 lg:px-12 z-10 lg:max-w-3xl"
+                >
+                    {/* New Title */}
+                    <div className="max-w-2xl mb-8 text-justify">
+                        <motion.h1
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="text-3xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-white"
+                        >
+                            About Sanjeevkumar
+                        </motion.h1>
+
+                        {/* About Me Story */}
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                            className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-4"
+                        >
+                            Hi, I’m <strong>Sanjeevkumar</strong>, a passionate <strong>software engineer</strong> with over <strong>3+ years of experience</strong> building scalable and efficient web applications. I specialize in <strong>multi-tier web development</strong>, <strong>cloud technologies</strong>, and <strong>DevOps practices</strong>, ensuring seamless user experiences and robust back-end systems.
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.5 }}
+                            className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-4"
+                        >
+                            My expertise spans across <strong>programming</strong>, <strong>software security</strong>, and <strong>cloud computing</strong>. I have a deep understanding of building applications that not only perform well but are secure, scalable, and future-ready.
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.7 }}
+                            className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-4"
+                        >
+                            With a strong foundation in <strong>problem-solving</strong> and an ability to adapt to new project requirements, I thrive in fast-paced environments. I’m always open to learning and implementing the latest technologies to stay ahead in this ever-evolving field.
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.9 }}
+                            className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-4"
+                        >
+                            Whether working independently or collaborating with cross-functional teams, I strive to deliver impactful solutions that drive innovation. I believe in continuous improvement and staying agile in an ever-changing tech landscape.
+                        </motion.p>
+                    </div>
+                </motion.div>
             </div>
 
-            {/* Animated Skill Icons */}
-            <div className="mt-12">
-                <SkillIcons />
+            {/* Skill Icons Section */}
+            <div className="w-full px-8 py-16 bg-gradient-to-br from-light-blue-400 via-violet-400 to-coral-400 dark:from-gray-800 dark:to-gray-900 text-gray-500 dark:text-gray-300">
+                <motion.h2
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white"
+                >
+                    My Skills
+                </motion.h2>
+                <div className="flex justify-center">
+                    <SkillIcons />
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
