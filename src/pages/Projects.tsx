@@ -1,28 +1,28 @@
 // src/pages/Projects.tsx
 
 import React from 'react';
-import ProjectCard from '../components/ProjectCard';
+// import ProjectCard from '../components/ProjectCard';
 import { motion } from 'framer-motion'; // For animations
 
-const projects = [
-    {
-        id: 1,
-        title: 'Project One',
-        description: 'A brief description of Project One.',
-        image: 'https://picsum.photos/seed/picsum1/400/300',
-        repoLink: 'https://github.com/yourusername/project-one',
-        liveDemo: 'https://project-one-demo.com',
-    },
-    {
-        id: 2,
-        title: 'Project Two',
-        description: 'A brief description of Project Two.',
-        image: 'https://picsum.photos/seed/picsum2/400/300',
-        repoLink: 'https://github.com/yourusername/project-two',
-        liveDemo: 'https://project-two-demo.com',
-    },
-    // Add more projects as needed
-];
+// const projects = [
+//     {
+//         id: 1,
+//         title: 'Project One',
+//         description: 'A brief description of Project One.',
+//         image: 'https://picsum.photos/seed/picsum1/400/300',
+//         repoLink: 'https://github.com/yourusername/project-one',
+//         liveDemo: 'https://project-one-demo.com',
+//     },
+//     {
+//         id: 2,
+//         title: 'Project Two',
+//         description: 'A brief description of Project Two.',
+//         image: 'https://picsum.photos/seed/picsum2/400/300',
+//         repoLink: 'https://github.com/yourusername/project-two',
+//         liveDemo: 'https://project-two-demo.com',
+//     },
+//     // Add more projects as needed
+// ];
 
 const Projects: React.FC = () => {
     return (

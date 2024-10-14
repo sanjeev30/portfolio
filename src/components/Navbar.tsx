@@ -11,14 +11,13 @@ import {
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
-import { toggleDarkMode, toggleNavOpen, closeNav } from '../store/themeSlice';
+import { toggleNavOpen, closeNav } from '../store/themeSlice';
 import TransitionLink from './TransitionLink';
 import { useLocation } from 'react-router-dom'; // Import useLocation
 
 const Navbar: React.FC = () => {
     const dispatch = useAppDispatch();
     const navOpen = useAppSelector((state) => state.theme.navOpen);
-    const darkMode = useAppSelector((state) => state.theme.darkMode);
     const location = useLocation(); // Get the current location
 
     const navLinks = [
