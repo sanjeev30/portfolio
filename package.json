@@ -2,7 +2,7 @@
   "name": "o1-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sanjeevsharma.me",
+  "homepage": "https://www.sanjeevsharma.me",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.8",
     "@testing-library/jest-dom": "^5.17.0",
