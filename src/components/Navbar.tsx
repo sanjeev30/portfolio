@@ -7,8 +7,6 @@ import {
     FaBriefcase,
     FaProjectDiagram,
     FaEnvelope,
-    FaSun,
-    FaMoon,
 } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
