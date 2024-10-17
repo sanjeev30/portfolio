@@ -11,6 +11,7 @@ import Home from './pages/Home';
 
 // const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
+const Skills = lazy(() => import('./pages/Skills'));
 const Experience = lazy(() => import('./pages/Experience'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -35,6 +36,14 @@ const App: React.FC = () => {
               element={
                 <Suspense fallback={<div>Loading About...</div>}>
                   <About />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/skills"
+              element={
+                <Suspense fallback={<div>Loading Skills...</div>}>
+                  <Skills />
                 </Suspense>
               }
             />
