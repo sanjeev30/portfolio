@@ -1,29 +1,28 @@
-// src/pages/Projects.tsx
-
 import React from 'react';
-// import ProjectCard from '../components/ProjectCard';
+import ProjectCard from '../components/ProjectCard';
 import { motion } from 'framer-motion'; // For animations
-import wip from '../assets/wip.webp';
 
-// const projects = [
-//     {
-//         id: 1,
-//         title: 'Project One',
-//         description: 'A brief description of Project One.',
-//         image: 'https://picsum.photos/seed/picsum1/400/300',
-//         repoLink: 'https://github.com/yourusername/project-one',
-//         liveDemo: 'https://project-one-demo.com',
-//     },
-//     {
-//         id: 2,
-//         title: 'Project Two',
-//         description: 'A brief description of Project Two.',
-//         image: 'https://picsum.photos/seed/picsum2/400/300',
-//         repoLink: 'https://github.com/yourusername/project-two',
-//         liveDemo: 'https://project-two-demo.com',
-//     },
-//     // Add more projects as needed
-// ];
+import deepCompression from '../assets/projects/deep-compression.webp';
+
+const projects = [
+    {
+        id: 1,
+        title: 'Deep Compression',
+        description: 'Demonstrated Neural Network Model Compression',
+        image: deepCompression,
+        repoLink: 'https://github.com/sanjeev30/deep-compression',
+        skills: ['Python', 'Tensorflow', 'ResNet-50']
+    },
+    // {
+    //     id: 2,
+    //     title: 'Project Two',
+    //     description: 'A brief description of Project Two.',
+    //     image: 'https://picsum.photos/seed/picsum2/400/300',
+    //     repoLink: 'https://github.com/yourusername/project-two',
+    //     skills: ['Python', 'Flask', 'PostgreSQL'], // Example skills
+    // },
+    // Add more projects as needed
+];
 
 const Projects: React.FC = () => {
     return (
@@ -42,9 +41,9 @@ const Projects: React.FC = () => {
                 My Projects
             </motion.h1>
 
-            {/* Projects Grid */}
-            {/* <motion.div
-                className="max-w-6xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 z-10 px-4"
+            {/* Projects List */}
+            <motion.div
+                className="w-full flex flex-col space-y-8 z-10 px-4"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5 }}
@@ -52,15 +51,7 @@ const Projects: React.FC = () => {
                 {projects.map((project) => (
                     <ProjectCard key={project.id} project={project} />
                 ))}
-            </motion.div> */}
-            {/* Construction Image Placeholder */}
-            <div className="flex items-center justify-center">
-                <img
-                    src={wip}
-                    alt="Construction in Progress"
-                    className="rounded-lg shadow-lg"
-                />
-            </div>
+            </motion.div>
         </div>
     );
 };
