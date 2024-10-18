@@ -13,7 +13,7 @@ const getGreeting = (): string => {
 
 const Home: React.FC = () => {
     const [text] = useTypewriter({
-        words: ['a Creative Coder.', 'a Full Stack Developer.', 'a Cloud Enthusiast.', 'a DevOps Engineer.', 'an Innovator.'],
+        words: ['a Full Stack Developer.', 'a Cloud Enthusiast.', 'a DevOps Engineer.', 'an Innovator.'],
         loop: true,
         delaySpeed: 2000,
     });
