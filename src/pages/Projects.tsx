@@ -3,24 +3,25 @@ import ProjectCard from '../components/ProjectCard';
 import { motion } from 'framer-motion'; // For animations
 
 import deepCompression from '../assets/projects/deep-compression.webp';
+import hearts from '../assets/projects/Hearts.webp';
 
 const projects = [
     {
         id: 1,
         title: 'Deep Compression',
-        description: 'Demonstrated Neural Network Model Compression',
+        description: 'As part of my master’s project at George Mason University, I developed a solution to compress Deep Neural Networks (DNN) for edge devices like mobile phones and IoT systems. Using techniques such as Knowledge Distillation, Pruning, and Quantization, I reduced the ResNet50 model size from 101 MB to 30 KB while maintaining 76% accuracy. I deployed the compressed model on an Android device with TensorFlow Lite, achieving 12-14x faster inference times. By leveraging TensorFlow’s optimization libraries, I ensured real-time processing capabilities in resource-constrained environments.',
         image: deepCompression,
         repoLink: 'https://github.com/sanjeev30/deep-compression',
-        skills: ['Python', 'Tensorflow', 'ResNet-50']
+        skills: ['Python', 'Tensorflow', 'Pruning', 'Quantization', 'Distillation', 'ResNet-50']
     },
-    // {
-    //     id: 2,
-    //     title: 'Project Two',
-    //     description: 'A brief description of Project Two.',
-    //     image: 'https://picsum.photos/seed/picsum2/400/300',
-    //     repoLink: 'https://github.com/yourusername/project-two',
-    //     skills: ['Python', 'Flask', 'PostgreSQL'], // Example skills
-    // },
+    {
+        id: 2,
+        title: 'Hearts Game',
+        description: 'The Hearts Card Game is a secure, multiplayer game built using Java (Spring Boot), Angular, and PostgreSQL. It emphasizes strong security practices, featuring JWT authentication, BCrypt password hashing, and TLS 1.3 for encrypted communication. Tools like SonarQube and OWASP ZAP were used to identify and mitigate vulnerabilities, ensuring robust protection against common security threats. The project showcases real-time gameplay with player statistics, secure login, and future plans for enhanced GUI and player rewards.',
+        image: hearts,
+        repoLink: 'https://github.com/yourusername/project-two',
+        skills: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'JWT', 'BCrypt', 'TLS 1.3', 'Maven', 'Node.js', 'NPM', 'SonarQube', 'OWASP ZAP', 'JPA', 'SLF4J']
+    },
     // Add more projects as needed
 ];
 
