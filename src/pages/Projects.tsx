@@ -19,7 +19,7 @@ const projects = [
         title: 'Hearts Game',
         description: 'The Hearts Card Game is a secure, multiplayer game built using Java (Spring Boot), Angular, and PostgreSQL. It emphasizes strong security practices, featuring JWT authentication, BCrypt password hashing, and TLS 1.3 for encrypted communication. Tools like SonarQube and OWASP ZAP were used to identify and mitigate vulnerabilities, ensuring robust protection against common security threats. The project showcases real-time gameplay with player statistics, secure login, and future plans for enhanced GUI and player rewards.',
         image: hearts,
-        repoLink: 'https://github.com/yourusername/project-two',
+        repoLink: 'https://github.com/sanjeev30/hearts-card-game-server',
         skills: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'JWT', 'BCrypt', 'TLS 1.3', 'Maven', 'Node.js', 'NPM', 'SonarQube', 'OWASP ZAP', 'JPA', 'SLF4J']
     },
     // Add more projects as needed
