@@ -9,8 +9,6 @@ import Footer from './components/Footer';
 import DarkModeToggle from './components/DarkModeToggle';
 import Home from './pages/Home';
 
-// const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
 const Skills = lazy(() => import('./pages/Skills'));
 const Experience = lazy(() => import('./pages/Experience'));
 const Projects = lazy(() => import('./pages/Projects'));
@@ -29,14 +27,6 @@ const App: React.FC = () => {
               path="/"
               element={
                 <Home />
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                <Suspense fallback={<div>Loading About...</div>}>
-                  <About />
-                </Suspense>
               }
             />
             <Route

@@ -1,7 +1,6 @@
 import React from 'react';
 import {
     FaHome,
-    FaUser,
     FaBriefcase,
     FaProjectDiagram,
     FaEnvelope,
@@ -21,7 +20,6 @@ const Navbar: React.FC = () => {
 
     const navLinks = [
         { to: '/', icon: <FaHome size={24} />, label: 'Home' },
-        { to: '/about', icon: <FaUser size={24} />, label: 'About' },
         { to: '/skills', icon: <FaTools size={24} />, label: 'Skills' },
         { to: '/experience', icon: <FaBriefcase size={24} />, label: 'Experience' },
         { to: '/projects', icon: <FaProjectDiagram size={24} />, label: 'Projects' },
