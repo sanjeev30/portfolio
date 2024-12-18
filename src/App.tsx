@@ -1,8 +1,9 @@
 // src/App.tsx
 
-import React, { Suspense, lazy } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useAppSelector } from './store/hooks';
+import ReactGA from 'react-ga4'
 import Navbar from './components/Navbar';
 import Layout from './components/Layout';
 import Footer from './components/Footer';
@@ -14,7 +15,15 @@ const Experience = lazy(() => import('./pages/Experience'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Contact = lazy(() => import('./pages/Contact'));
 
+const TRACKING_ID = "G-2175DT619Q";
+
 const App: React.FC = () => {
+
+  useEffect(() => {
+    ReactGA.initialize(TRACKING_ID);
+    ReactGA.send("pageview");
+  }, []);
+
   const darkMode = useAppSelector((state) => state.theme.darkMode);
 
   return (
