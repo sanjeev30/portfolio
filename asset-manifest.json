@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.5155de65.css",
-    "main.js": "/static/js/main.ed87bb9d.js",
-    "static/js/302.c338e263.chunk.js": "/static/js/302.c338e263.chunk.js",
+    "main.css": "/static/css/main.d15a8b12.css",
+    "main.js": "/static/js/main.d2657130.js",
     "static/js/525.2e01b13a.chunk.js": "/static/js/525.2e01b13a.chunk.js",
     "static/js/184.96bb80e1.chunk.js": "/static/js/184.96bb80e1.chunk.js",
     "static/js/552.9049555a.chunk.js": "/static/js/552.9049555a.chunk.js",
     "static/js/407.40571171.chunk.js": "/static/js/407.40571171.chunk.js",
     "static/js/453.6fc625ab.chunk.js": "/static/js/453.6fc625ab.chunk.js",
     "static/media/profile-gray-bg.png": "/static/media/profile-gray-bg.9b6ea2770cbef64927b7.png",
-    "static/media/profile_wharf.jpg": "/static/media/profile_wharf.f84945178ccd66b2ebf9.jpg",
     "static/media/deep-compression.webp": "/static/media/deep-compression.54ccb5816af96c20ef04.webp",
     "static/media/mumbai-university.png": "/static/media/mumbai-university.337ea6700ac78b74d3b3.png",
     "static/media/best.png": "/static/media/best.eea98cd2c8693daf1c68.png",
@@ -18,9 +16,8 @@
     "static/media/ourcode.png": "/static/media/ourcode.9c729173bf8086f56db1.png",
     "static/media/tcs.png": "/static/media/tcs.6d8a1c32892dd4453344.png",
     "index.html": "/index.html",
-    "main.5155de65.css.map": "/static/css/main.5155de65.css.map",
-    "main.ed87bb9d.js.map": "/static/js/main.ed87bb9d.js.map",
-    "302.c338e263.chunk.js.map": "/static/js/302.c338e263.chunk.js.map",
+    "main.d15a8b12.css.map": "/static/css/main.d15a8b12.css.map",
+    "main.d2657130.js.map": "/static/js/main.d2657130.js.map",
     "525.2e01b13a.chunk.js.map": "/static/js/525.2e01b13a.chunk.js.map",
     "184.96bb80e1.chunk.js.map": "/static/js/184.96bb80e1.chunk.js.map",
     "552.9049555a.chunk.js.map": "/static/js/552.9049555a.chunk.js.map",
@@ -28,7 +25,7 @@
     "453.6fc625ab.chunk.js.map": "/static/js/453.6fc625ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5155de65.css",
-    "static/js/main.ed87bb9d.js"
+    "static/css/main.d15a8b12.css",
+    "static/js/main.d2657130.js"
   ]
 }
